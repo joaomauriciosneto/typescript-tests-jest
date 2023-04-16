@@ -1,6 +1,7 @@
 import Product from "../products/products";
+import { CartProtocol } from "./contracts/cart.protocol";
 
-export default class Cart {
+export default class Cart implements CartProtocol {
   private readonly _items: Product[] = [];
 
   // adicinoar itens no carrinho
@@ -37,6 +38,6 @@ export default class Cart {
 
   // limpar o carrinho
   clear(): void {
-    this._items.length === 0
+    this._items.length = 0
   }
 }
